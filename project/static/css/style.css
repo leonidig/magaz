@@ -16,6 +16,7 @@ h1 {
     margin: 20px auto;
     max-width: 1200px;
 }
+
 .product {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -25,7 +26,9 @@ h1 {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    
 }
+
 .product:hover {
     transform: translateY(-5px);
 }
@@ -50,6 +53,7 @@ h1 {
     justify-content: space-between;
     height: auto;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 

@@ -23,20 +23,35 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
-
+            
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/consoles">Consoles</a>
-            </li>
+                <a class="nav-link" href="/allgames">All Games</a>
+              </li>
+  
 
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/allgames">Games</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/xboxgames">XBox Games</a>
+              </li>
+  
+
+              <li class="nav-item">
+                <a class="nav-link" href="/psgames">PS Games</a>
+              </li>
 
 
+              <li class="nav-item">
+                <a class="nav-link" href="/consoles">Consoles</a>
+              </li>
 
+              <li class="nav-item">
+                <a class="nav-link" href="/phones">Phones</a>
+              </li>
+
+              
             <li class="nav-item">
               <a class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
@@ -57,7 +72,6 @@
         <br>
         <h2><strong>{{ product.name }}</strong></h2>
         <br>
-        <p>{{ product.description }}</p>
             <p>Price: ${{ product.price }}</p>
             <br>
             <button>Add to cart</button>

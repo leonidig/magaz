@@ -9,7 +9,7 @@ def get_consoles():
     consoles = [
         {"name": "PlayStation 5", "description": "Play Station 5 | 825gb", "price": 550, "image": "static/images/consoles/image1.jpg"},
         {"name": "PlayStation 4 Pro", "description": "PlayStation 4 Pro | 1TB", "price": 500, "image": "static/images/consoles/image2.webp"},
-        {"name": "Xbox Series X", "description": "XBox X | 1TB", "price": 400, "image": "static/images/consoles/image3.jpg"},
+        {"name": "Xbox Series X", "description": "XBox Series X | 1TB", "price": 400, "image": "static/images/consoles/image3.jpg"},
         {"name": "Xbox Series S", "description": "Xbox Series S | White | 512GB", "price": 270, "image": "static/images/consoles/image4.webp"},
         {"name": "Nintendo Switch Oled", "description": "Nintendo Switch Oled | White | 64GB", "price": 500, "image": "static/images/consoles/image5.avif"},
         {"name": "PlayStation 5 Slim DE", "description": "PS 5 Slim | 1Tb", "price": 570, "image": "static/images/consoles/image6.webp"},
@@ -36,11 +36,31 @@ def get_phones():
 
 
 
+def get_ps_games():
+    ps_games = [
+        {"name": "PS5 Marvel's Spider-Man 2", "price": 70, "image": "static/images/games/image19.avif"},
+        {"name": "PS5 EA SPORTS FC 24", "price": 80, "image": "static/images/games/image20.jpg"},
+        {"name": "PS5 The Last Of Us Part II Remastered", "price": 35, "image": "static/images/games/image21.avif"}
+    ]
+
+    return ps_games
+
+def get_x_games():
+    x_games = [
+        {"name": "NBA 2K24", "description": "Xbox NBA 2K24 [X One | X Series X]", "price": 65, "image": "static/images/games/image22.avif"},
+        {"name": "Xbox LEGO 2К Drive ", "description": "Xbox NBA 2K24 [X One | X Series X]", "price": 65, "image": "static/images/games/image23.avif"},
+        {"name": "Xbox S.T.A.L.K.E.R. 2", "description": "Xbox S.T.A.L.K.E.R. 2 Collector's Edition", "price": 155, "image": "static/images/games/image24.jpg"}
+    ]
+
+    return x_games
+
+
 @app.get("/")
 def main():
     consoles = get_consoles()
     phones = get_phones()
-    products = consoles + phones
+    games = get_ps_games() + get_x_games()
+    products = consoles + phones + games
     return render_template("index.html", products=products)
 
 
@@ -54,6 +74,22 @@ def console():
 def phone():
     phones = get_phones()
     return render_template("phones.html", products=phones)
+
+
+@app.get("/allgames")
+def all_game():
+    games = get_ps_games() + get_x_games()
+    return render_template("games.html", products=games)
+
+@app.get("/playstationgames")
+def ps_game():
+    games = get_ps_games()
+    return render_template("ps_games.html", products=games)
+
+@app.get("/xboxgames")
+def x_game():
+    games = get_x_games()
+    return render_template("x_games.html", products=games)
 
 
 
