@@ -115,6 +115,19 @@ def product(product_id):
     return render_template('info.html', product=selected_product)
 
 
+@app.route("/cart<int:product_id>")
+def cart(product_id):
+    selected_product = None
+    for product in all_products:
+        if product['id'] == product_id:
+            selected_product = product
+            break
+    
+    if selected_product is None:
+        return "Product not found", 404
+    
+    return render_template('cart.html', product=selected_product)
+
 
 
 # A C C O U N T
