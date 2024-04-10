@@ -70,17 +70,17 @@ h1 {
 }
 
 
-.product button {
-    background-color: #4CAF50;
-    color: white;
+.btn-primary {
+    display: inline-block;
     padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none; /* Удаление подчеркивания */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease-in-out;
 }
 
-.product button:hover {
-    background-color: #388e3c; 
+.btn-primary:hover {
+    background-color: #0056b3;
 }

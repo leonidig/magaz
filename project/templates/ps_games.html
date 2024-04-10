@@ -71,7 +71,7 @@
         <br>
             <p>Price: ${{ product.price }}</p>
             <br>
-            <button>Add to cart</button>
+            <a href="{{ url_for('cart', product_id=product.id) }}" class="btn-primary">Add to cart</a>
           </div>
           {% endfor %}
       </div>
