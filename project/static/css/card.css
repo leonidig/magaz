@@ -2,3 +2,16 @@ img {
     margin-top: 117px;
   }
   
+  .btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3e33de;
+    color: white;
+    border-radius: 11px; /* Радиус скругления */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #352faf;
+}
